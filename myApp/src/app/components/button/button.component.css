@@ -1,0 +1,15 @@
+button {
+    background-color: rebeccapurple;
+    border: none;
+    height: 3rem;
+    padding: 0 1.5rem;
+    color: azure;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: medium;
+
+}
+button:hover{
+    background-color: rgb(148, 103, 199);
+     cursor: pointer;
+}
