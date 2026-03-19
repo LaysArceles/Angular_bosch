@@ -1,1 +1,15 @@
-<p>mercado-page works!</p>
+<div class="greasy" *ngFor="let M_market of Market; track: $index">
+    <div class="card">
+
+        <div class="carossell">
+            <div class="title">
+                {{M_market.name}}
+            </div>
+            <img [src]="M_market.image" alt="Imagem dinamica" width="350px" height="200px">
+        </div>
+
+        <div class="txt">R${{M_market.price}} <br></div>
+        <div class="description">{{M_market.description}}</div>
+    </div>
+
+</div>

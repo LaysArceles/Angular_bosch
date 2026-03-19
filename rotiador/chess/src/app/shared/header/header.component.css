@@ -6,9 +6,14 @@ header{
     height: 5rem;
     box-shadow: 0 0 10px black;
     padding:  0 2rem;
+    background-color: rgb(60, 143, 94);
     
     .links{
         display: flex;
         gap:1rem;
+    }
+    .Ifoor{
+        color: white;
+        font-size: 40px;
     }
 }

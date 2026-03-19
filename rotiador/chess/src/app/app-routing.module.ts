@@ -8,7 +8,7 @@ import { ComidaPageComponent } from './features/main-page/comida-page/comida-pag
 
 const routes: Routes = [
   {path: "",component:MainPageComponent, children:[
-    {path:"Merdadinho",component:MercadoPageComponent},
+    {path:"mercado",component:MercadoPageComponent},
     {path:"comida", component:ComidaPageComponent}
   ]},
   {path: "login",component:LoginPageComponent},
