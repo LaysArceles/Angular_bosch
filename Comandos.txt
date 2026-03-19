@@ -1,3 +1,10 @@
 npm install -g @angular/cli@16
 ng v
+ng new nome do aplicativo
+
+no
+CSS
+cd chess
+npm start
+
 ng generate component nomePasta /nomeArquivo
