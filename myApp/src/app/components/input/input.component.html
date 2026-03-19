@@ -1,6 +1,9 @@
 
-<input (input)= "segredinho()" >
-<h1>
-    {{segredo}}
 
-</h1>
+<div class = "input-container">
+    <label>nome: </label>
+    <input 
+    type = "text" 
+    [value] = "Value"
+    (input)="segredinho($event)" >
+</div>

@@ -9,10 +9,12 @@ export class AppComponent {
   title = 'myApp';
   count = 0;
   caixinha = "";
+  
+  nome = "Lays"
 
-  digitando = ( textinho = " ") => {
-    this.caixinha = textinho
-     console.log(this.caixinha);
+  digitando = (value: string) => {
+    this.nome = value 
+    
   }
 
   foiClicado= () =>{

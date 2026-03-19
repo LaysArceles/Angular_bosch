@@ -1,3 +1,9 @@
-{{count}}
+   {{nome}}
+   <br>
+  <!--
 <app-button (onclick) = "foiClicado()" [label] = "this.count.toString()"/>
-<app-input (input) = "digitando(value)" [segredo] = "this.caixinha"/>
+<app-input
+  [Value] = "nome"
+  (changed) = "digitando($event)"
+  /> -->
+<input type = "text" [(ngModel)]="nome">

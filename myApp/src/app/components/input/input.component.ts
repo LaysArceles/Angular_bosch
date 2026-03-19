@@ -1,3 +1,4 @@
+
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
@@ -6,13 +7,16 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent { 
-  @Output()
-  sla: EventEmitter<String> = new EventEmitter
-
+  
   @Input()
- segredo : string = "";
+   Value: string = "";
 
-  segredinho = ()=>{
-    this.sla.emit();
+  @Output()
+  changed: EventEmitter<string> = new EventEmitter();
+
+
+  segredinho = (value: any )=>{
+    const stringvalue = value.srcElement?.value;
+    this.changed.emit(stringvalue);
   } 
 }
