@@ -11,6 +11,15 @@ import { HeaderComponent } from './shared/header/header.component';
 import { NavComponent } from './shared/nav/nav.component';
 import { MercadoPageComponent } from './features/main-page/mercado-page/mercado-page.component';
 import { ComidaPageComponent } from './features/main-page/comida-page/comida-page.component';
+import { ComidadetailsmodalComponent } from './features/main-page/comida-page/comidadetailsmodal/comidadetailsmodal.component';
+import { MercadodetailsmodalComponent } from './features/main-page/mercado-page/mercadodetailsmodal/mercadodetailsmodal.component';
+import { CardComponent } from './shared/card/card.component';
+import { ComidaCardComponent } from './features/main-page/comida-page/comida-card/comida-card.component';
+import { LoginCardComponent } from './features/login-page/login-card/login-card.component';
+import { LoginDetailsModalComponent } from './features/login-page/login-details-modal/login-details-modal.component';
+import { CadastrarPageComponent } from './features/login-page/cadastrar-page/cadastrar-page.component';
+
+
 
 @NgModule({
   declarations: [
@@ -21,7 +30,14 @@ import { ComidaPageComponent } from './features/main-page/comida-page/comida-pag
     HeaderComponent,
     NavComponent,
     MercadoPageComponent,
-    ComidaPageComponent
+    ComidaPageComponent,
+    ComidadetailsmodalComponent,
+    MercadodetailsmodalComponent,
+    CardComponent,
+    ComidaCardComponent,
+    LoginCardComponent,
+    LoginDetailsModalComponent,
+    CadastrarPageComponent,
   ],
   imports: [
     BrowserModule,

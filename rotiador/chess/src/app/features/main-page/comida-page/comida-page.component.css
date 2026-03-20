@@ -1,4 +1,8 @@
 comida {
+    display: flex;
+}
 
-    
+._Menu {
+    display: flex;
+    flex-wrap: wrap;
 }

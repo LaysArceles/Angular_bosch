@@ -1,4 +1,4 @@
-export interface Ifestfood{
+export interface Festfood{
     id: string,
     name: string,
     description: string,
@@ -6,7 +6,7 @@ export interface Ifestfood{
     price: number
 }
 
-const MockFestfood:Ifestfood[]=[
+export const menu:Festfood[]=[
     {
         id: "123456",
         name: "big buger",
@@ -43,4 +43,3 @@ const MockFestfood:Ifestfood[]=[
     image: "https://abf.com.br/wp-content/uploads/2023/02/700x400.png"
 }
 ]
-export default MockFestfood

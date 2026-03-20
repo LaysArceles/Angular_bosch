@@ -1,0 +1,113 @@
+.modal-bg {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+
+
+}
+
+.modal-container {
+
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    inset: 0;
+    background-color: rgb(167, 230, 209);
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    margin: 10px;
+    padding-left: 0.2rem;
+    padding-top: 0.7rem;
+    width: 25rem;
+    height: 30rem;
+
+}
+
+button {
+    background-color: rgb(7, 104, 59);
+    color: white;
+    margin: 0.1rem;
+    height: 2rem;
+    width: 23rem;
+    border: 0;
+    box-shadow: 0 0 10px black;
+    border-radius: 7px;
+    padding-top: 0.3rem;
+}
+
+.modal-footer {
+    width: 100%;
+}
+
+.title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    margin: 5px;
+
+}
+
+.modal-header {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5rem;
+
+    flex-direction: row;
+    text-align: center;
+    justify-items: center;
+}
+
+.description {
+    text-align: center;
+    font-size: 20px;
+}
+
+.modal-footer {
+    margin-top: 1rem;
+    gap: 20rem;
+    padding: 1rem;
+
+}
+
+.modal-countent {
+    position: relative;
+    justify-content: center;
+    justify-self: center;
+    padding-left: 1.5rem;
+    align-self: center;
+
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    font-size: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+h2 {
+    padding-bottom: 0.5rem;
+
+}
+
+img {
+    position:a;
+    justify-self: center;
+
+    right: 1rem;
+    top: 0.5rem;
+    cursor: pointer;
+}

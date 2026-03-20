@@ -14,5 +14,10 @@ nav{
         align-items: start;
         gap:.5rem;
     }
+    a{
+        color: white;
+        text-decoration: none;
+
+    }
 
 }

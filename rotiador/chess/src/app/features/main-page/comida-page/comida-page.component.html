@@ -1,16 +1,14 @@
-<!-- {{pessoas[2].name}} -->
-<div class="greasy" *ngFor="let f_food of festFood; track: $index">
-    <div class="card">
 
-        <div class="carossell">
-            <div class="title">
-                {{f_food.name}}
-            </div>
-            <img [src]="f_food.image" alt="Imagem dinamica" width="350px" height="200px">
-        </div>
+<div class="_Menu">
+    <app-comida-card 
+    *ngFor="let f_food of menu; track: $index" 
+    [food]="f_food" 
+    (click)="onCardClick(f_food)"/>
 
-        <div class="txt">R${{f_food.price}} <br></div>
-        <div class="description">{{f_food.description}}</div>
-    </div>
 
 </div>
+
+<app-comidadetailsmodal 
+*ngIf="festFood" 
+[item]="festFood"
+ (onClose)="festFood = undefined"/>

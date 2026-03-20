@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import MockPesoas, { IPessoa } from './Pessoas.mock';
-import MockFestfood, { Ifestfood } from './Comida.mock';
+import {Festfood, menu }from './Comida.mock';
 
 @Component({
   selector: 'app-comida-page',
@@ -9,13 +8,17 @@ import MockFestfood, { Ifestfood } from './Comida.mock';
   
 })
 export class ComidaPageComponent {
-  protected festFood:Ifestfood[]=[]
-  constructor (){
-    this.festFood = MockFestfood;
+
+  protected menu:Festfood[]=[]
+  protected festFood?:Festfood;
+
+  constructor () {
+    this.menu = menu;
   }
 
-  // protected pessoas: IPessoa[]=[]
-  // constructor(){
-  //   this.pessoas = MockPesoas;
-  // }
+  onCardClick = (item:Festfood)=>{
+    this.festFood = item;
+
+  }
+  
 }

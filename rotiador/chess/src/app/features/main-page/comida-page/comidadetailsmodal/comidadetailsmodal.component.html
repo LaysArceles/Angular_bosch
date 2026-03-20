@@ -1,0 +1,20 @@
+<div class="model-bg" (click)="toggleClose()"></div>
+
+<div class="modal-container">
+
+    <div class="modal-header">
+        <div class="title">{{item?.name}}</div>
+        <div class="close" (click)="toggleClose()">x</div>
+    </div>
+
+    <div class="modal-countent">
+        <img [src] = "item?.image" alt="" height="200px">
+        <p>{{item?.description}}</p>
+
+    </div>
+
+    <div class="modal-footer">
+        <h2>R${{item?.price}}</h2>
+        <button>Comprar</button>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+app-Mercado-page {
+    display: flex;
+    flex-wrap: wrap;
+
+    .greasy {
+        display: flex;
+        height: 450px;
+        width: 410px;
+        background-color: rgb(16, 105, 75);
+        border-radius: 10px;
+        margin: 10px;
+        padding-left: 20px;
+        padding-top: 10px;
+
+        .card {
+
+            .carossell {
+                justify-items: center;
+                justify-self: center;
+
+                align-items: center;
+
+                .title {
+                    color: rgb(3, 3, 3);
+                    font-size: 40px;
+                }
+
+                .title:hover {
+                    color: rgb(116, 51, 51);
+                }
+            }
+
+            .description {
+                font-size: 20px;
+            }
+
+            .txt {
+                font-size: 40px;
+            }
+        }
+
+    }
+}
