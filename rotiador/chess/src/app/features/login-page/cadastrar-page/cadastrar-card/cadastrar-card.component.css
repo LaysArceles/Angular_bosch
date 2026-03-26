@@ -1,0 +1,97 @@
+app-cadastrar-card {
+    display: flex;
+    backdrop-filter: blur (10px) ;
+}
+.aff{
+     display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    min-height: 80vh;       /* Altura total da tela */
+    
+
+}
+.card_container {
+    border-radius: 10px;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    inset: 0;
+    box-shadow: 0 0 10px;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(115, 211, 151);
+    width: 35rem;
+    height: 35rem;
+    color: white;
+   
+    .card_header {
+        width: 100%;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        height: 3rem;
+
+        img {
+            cursor: pointer;
+            height: 1.2rem;
+            width: 1rem;
+        }
+
+    }
+
+    .card_main {
+        font-size: 1.5rem;
+        width: 27rem;
+        height: 30rem;
+
+        input {
+            border-radius: 18px;
+            width: 27rem;
+            height: 2.5rem;
+            padding: 10px;
+            border: 2px solid rgb(58, 131, 82);
+            box-shadow: 0 0 5px rgba(58, 131, 82);
+        }
+    }
+
+    .card_footer {
+        font-size: 2rem;
+        width: 5rem;
+        height: 5rem;
+
+    }
+
+
+}
+
+.name_user {
+    height: 2.5rem;
+}
+
+.Password_user {
+    padding-top: 1rem;
+    height: 3.5rem;
+}
+
+button {
+    color: white;
+    outline: none;
+    font-size: 15px;
+    height: 2.5rem;
+    width: 5rem;
+    border: 2px solid rgb(58, 131, 82);
+    border-radius: 15px;
+    background-color: rgb(58, 131, 82) ;
+}
+
+button:focus {
+    outline: none;
+    border: 2px solid rgb(58, 131, 82);
+    box-shadow: 0 0 5px rgba(58, 131, 82);
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid rgb(58, 131, 82);
+    box-shadow: 0 0 5px rgba(58, 131, 82);
+}

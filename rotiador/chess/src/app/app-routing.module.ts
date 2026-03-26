@@ -6,7 +6,7 @@ import { NotFoundPageComponent } from './features/not-found-page/not-found-page.
 import { MercadoPageComponent } from './features/main-page/mercado-page/mercado-page.component';
 import { ComidaPageComponent } from './features/main-page/comida-page/comida-page.component';
 import { LoginCardComponent } from './features/login-page/main-login-page/login-card/login-card.component';
-import { CadastrarPageComponent } from './features/login-page/cadastrar-page/cadastrar-page.component';
+import { CadastrarCardComponent } from './features/login-page/cadastrar-page/cadastrar-card/cadastrar-card.component';
 
 const routes: Routes = [
   {path: "",component:MainPageComponent, children:[
@@ -16,7 +16,7 @@ const routes: Routes = [
   {path: "home",component:LoginPageComponent,
     children:[
       {path:"login", component:LoginCardComponent},
-      {path:"Cadastrar",component:CadastrarPageComponent}
+      {path:"cadastrar",component:CadastrarCardComponent}
     ]
   },
   {path: "**",component:NotFoundPageComponent},

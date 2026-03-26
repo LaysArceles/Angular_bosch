@@ -19,6 +19,7 @@ import { LoginCardComponent } from './features/login-page/main-login-page/login-
 import { LoginDetailsModalComponent } from './features/login-page/main-login-page/login-details-modal/login-details-modal.component';
 import { CadastrarPageComponent } from './features/login-page/cadastrar-page/cadastrar-page.component';
 import { MainLoginPageComponent } from './features/login-page/main-login-page/main-login-page.component';
+import { CadastrarCardComponent } from './features/login-page/cadastrar-page/cadastrar-card/cadastrar-card.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { MainLoginPageComponent } from './features/login-page/main-login-page/ma
     LoginDetailsModalComponent,
     CadastrarPageComponent,
     MainLoginPageComponent,
+    CadastrarCardComponent,
   ],
   imports: [
     BrowserModule,
