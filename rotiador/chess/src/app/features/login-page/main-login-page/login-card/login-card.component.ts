@@ -17,6 +17,4 @@ export class LoginCardComponent {
     const nameString = name.scrElement?.value;
     this.send.emit(nameString)
   }
-
-
 }

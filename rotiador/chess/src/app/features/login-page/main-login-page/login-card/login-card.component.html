@@ -1,0 +1,25 @@
+<div class="aff">
+    
+    <div class="card_container">
+        <div class="card_header">
+            <span>Login</span>
+            <img src="https://cdn-icons-png.flaticon.com/512/9972/9972749.png" value=" a">
+        </div>
+        <div class="card_main">
+
+            <div class="name_user">
+                <label>User: </label>
+            </div>
+
+            <input type="text" [value]="Value" (input)="EnviarNome($event)">
+
+            <div class="Password_user">
+                <label>Password: </label>
+            </div>
+            <input type="text" [value]="Value" (input)="EnviarNome($event)">
+        </div>
+        <div class="card_footer">
+            <button> send </button>
+        </div>
+    </div>
+</div>

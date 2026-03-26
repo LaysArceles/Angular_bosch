@@ -15,11 +15,10 @@ import { ComidadetailsmodalComponent } from './features/main-page/comida-page/co
 import { MercadodetailsmodalComponent } from './features/main-page/mercado-page/mercadodetailsmodal/mercadodetailsmodal.component';
 import { CardComponent } from './shared/card/card.component';
 import { ComidaCardComponent } from './features/main-page/comida-page/comida-card/comida-card.component';
-import { LoginCardComponent } from './features/login-page/login-card/login-card.component';
-import { LoginDetailsModalComponent } from './features/login-page/login-details-modal/login-details-modal.component';
+import { LoginCardComponent } from './features/login-page/main-login-page/login-card/login-card.component';
+import { LoginDetailsModalComponent } from './features/login-page/main-login-page/login-details-modal/login-details-modal.component';
 import { CadastrarPageComponent } from './features/login-page/cadastrar-page/cadastrar-page.component';
-
-
+import { MainLoginPageComponent } from './features/login-page/main-login-page/main-login-page.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +37,7 @@ import { CadastrarPageComponent } from './features/login-page/cadastrar-page/cad
     LoginCardComponent,
     LoginDetailsModalComponent,
     CadastrarPageComponent,
+    MainLoginPageComponent,
   ],
   imports: [
     BrowserModule,
