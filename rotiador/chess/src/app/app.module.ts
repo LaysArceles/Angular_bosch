@@ -20,6 +20,7 @@ import { LoginDetailsModalComponent } from './features/login-page/main-login-pag
 import { CadastrarPageComponent } from './features/login-page/cadastrar-page/cadastrar-page.component';
 import { MainLoginPageComponent } from './features/login-page/main-login-page/main-login-page.component';
 import { CadastrarCardComponent } from './features/login-page/cadastrar-page/cadastrar-card/cadastrar-card.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { CadastrarCardComponent } from './features/login-page/cadastrar-page/cad
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
