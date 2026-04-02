@@ -1,0 +1,10 @@
+.login-container {
+    display: flex;
+    main{
+        overflow: auto;
+        width: 100%;
+        height: calc(100vh - 5rem);
+        justify-content:space-between
+    }
+
+}
