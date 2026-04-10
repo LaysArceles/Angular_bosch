@@ -6,7 +6,6 @@ import { Injectable } from '@angular/core';
 })
 export class Api {
   protected readonly URL: string = "http://10.234.197.18:5294/Api"
-  constructor( protected client:HttpClient){
-  }
+  constructor( protected client:HttpClient){}
 }
 // construdor nos colocamos quando queremos uma class com injeção de dependencia

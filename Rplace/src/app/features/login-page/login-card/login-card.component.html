@@ -12,13 +12,19 @@
             </div>
             <div class="card_main">
                 <div class="login-card">
-
-                    <input type="text" placeholder="User: " [value]="Value" (input)="EnviarNome($event) ">
-                    <input type="text" placeholder="Password: " [value]="Value" (input)="EnviarNome($event)">
+                    <form action="get" [formGroup]="loginForm" (ngSubmit)="login()">
+                        <label for="">Username</label>
+                        <br>
+                        <input type="text" formControlName="username">
+                        <br>
+                        <label for="">Password</label>
+                        <br>
+                        <input type="password" formControlName="password">
+                    </form>
                 </div>
             </div>
             <div class="card_footer">
-                <button> send </button>
+                <button type="submit"> send </button>
             </div>
         </div>
     </div>

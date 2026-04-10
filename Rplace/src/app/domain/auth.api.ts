@@ -3,7 +3,6 @@ import{Api} from './api'
 import { loginDto } from './userInterfaces';
 import { Observable } from 'rxjs';
 
-
 @Injectable({
   providedIn: 'root',
 })
@@ -14,4 +13,5 @@ export class AuthApi extends Api {
    subscribe = (data:loginDto): Observable<void>=>{
     return this.client.post<void>(`${this.URL}/auth/subscribe`,data).pipe();
   }
+  
 }

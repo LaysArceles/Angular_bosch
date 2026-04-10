@@ -1,12 +1,21 @@
-<h1>Login</h1>
-<form action="get" [formGroup]="loginForm" (ngSubmit)="login()">
-    <label for="">Username</label>
+<header>
+    <h1>Rplace</h1>
+</header>
+<main>
     <br>
-    <input type="text" formControlName="username">
-    <br>
-    <label for="">Password</label>
-    <br>
-    <input type="password" formControlName="password">
-    <br>
-    <button type="submit">Login</button>
-</form>
+    <div class="paizao">
+        <div class="palette">
+            <div *ngFor="let color of colors" class="color-option" [style.background]="color"
+                (click)="selectColor(color)">
+            </div>
+        </div>
+        <br>
+        <div class="grid">
+            @for (pixel of pixels; track $index) {
+            <div class="pixel" (click)="paintPixel($index)" [style.background]="pixel.color">
+            </div>
+            }
+        </div>
+    </div>
+
+</main>
