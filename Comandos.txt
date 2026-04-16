@@ -1,10 +1,13 @@
+------ instalar angular --------
 npm install -g @angular/cli@16
 ng v
+
+------ criando o projeto -------
 ng new nome do aplicativo
+ng serve    //Inicia o servidor local e atualiza automaticamente ao salvar mudanças.
 
-no
-CSS
-cd chess
-npm start
+------ crinado componetes/serviços -------
+ng generate component nome || ng g c nome
+ng generate service nome   || ng g s nome
 
-ng generate component nomePasta /nomeArquivo
+npm start  //compilar e execultar 
