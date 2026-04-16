@@ -1,21 +1,20 @@
 <header>
     <h1>Rplace</h1>
 </header>
+
 <main>
     <br>
     <div class="paizao">
         <div class="palette">
-            <div *ngFor="let color of colors" class="color-option" [style.background]="color"
-                (click)="selectColor(color)">
-            </div>
-        </div>
-        <br>
-        <div class="grid">
-            @for (pixel of pixels; track $index) {
-            <div class="pixel" (click)="paintPixel($index)" [style.background]="pixel.color">
+            @for (row of pixels; track $index) {
+            <div class="row">
+                @for (pixel of row; track $index) {
+                <app-pixel [data]="pixel" (onChange)="updateData($event)" />
+                }
             </div>
             }
         </div>
     </div>
+    <br>
 
 </main>

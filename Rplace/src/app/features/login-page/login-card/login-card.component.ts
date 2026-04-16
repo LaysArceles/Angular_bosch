@@ -15,6 +15,7 @@ class LoginComponent {
  constructor(private api : AuthApi, 
   private router:Router
  ){}
+   protected isSubscribe: boolean = false;
 
   loginForm : FormGroup = new FormGroup({
     username: new FormControl('', [Validators.required]),
@@ -52,7 +53,7 @@ class LoginComponent {
     if(!this.loginForm.valid)
     {
       alert("Nem todos os campos são validos!");
-      return
+       this.router.navigate(['']);
     }
   }
 }

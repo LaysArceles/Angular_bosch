@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Pixel } from './pixel';
+import { EspecificRoom } from './especific-room';
 
-describe('Pixel', () => {
-  let component: Pixel;
-  let fixture: ComponentFixture<Pixel>;
+describe('EspecificRoom', () => {
+  let component: EspecificRoom;
+  let fixture: ComponentFixture<EspecificRoom>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Pixel],
+      imports: [EspecificRoom],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(Pixel);
+    fixture = TestBed.createComponent(EspecificRoom);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

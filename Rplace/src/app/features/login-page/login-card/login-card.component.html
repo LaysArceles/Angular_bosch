@@ -6,13 +6,19 @@
 <main>
     <div class="aff">
         <div class="card_container">
+            
             <div class="card_header">
-                <span>Login</span>
+                @if (isSubscribe) {
+                    <h1>Subscribe</h1>
+                }@else {
+                    <h1>Login</h1>
+                }
                 <img src="https://cdn-icons-png.flaticon.com/512/9972/9972749.png" value=" a">
             </div>
             <div class="card_main">
                 <div class="login-card">
-                    <form action="get" [formGroup]="loginForm" (ngSubmit)="login()">
+                    <!--  serve para HTML action="get" como usamos submit não precisa agora -->
+                    <form [formGroup]="loginForm" (ngSubmit)="login()">
                         <label for="">Username</label>
                         <br>
                         <input type="text" formControlName="username">
@@ -24,7 +30,22 @@
                 </div>
             </div>
             <div class="card_footer">
-                <button type="submit"> send </button>
+                <button type="submit">
+                    @if (isSubscribe){
+                    login
+                    }
+                    @else {
+                    Subscribe
+                    }
+
+                </button>
+                <button type="button" (click)="this.isSubscribe = !this.isSubscribe">
+                    @if (isSubscribe) {
+                    Subscribe
+                    }@else {
+                    login
+                    }
+                </button>
             </div>
         </div>
     </div>

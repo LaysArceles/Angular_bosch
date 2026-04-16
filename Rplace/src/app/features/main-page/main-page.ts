@@ -1,63 +1,77 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { Pixel } from './pixel/pixel';
-import { Router } from '@angular/router';
 import { Pixels } from '../../domain/pixels';
-import is from '@angular/common/locales/extra/is';
+import { IPixel } from './pixel/IPixel';
+import {HeaderComponent} from '../../shared/header/header.component'
 
 @Component({
   selector: 'app-main-page',
   standalone: true,
-  imports: [CommonModule,Pixel],
+  imports: [Pixel],
   templateUrl: './main-page.html',
   styleUrl: './main-page.css',
 })
 class MainPage {
+  //FORMA ERRADA DE SE FAZER (porem funciona)  
   constructor(
-    private router: Router,
+    private cdr: ChangeDetectorRef,
     private api: Pixels
   ){}
 
 
-  pixels: { color: string }[] = [];
-  colors: string[] = [
-    '#FF0000', // vermelho
-    '#00FF00', // verde
-    '#0000FF', // azul
-    '#FFFF00', // amarelo
-    '#FF00FF', // magenta
-    '#00FFFF', // ciano
-    '#000000', // preto
-    '#FFFFFF', // branco
-    '#FFA500', // laranja
-    '#800080'  // roxo
-  ];
-  selectedColor: string = this.colors[0];
-  
-
-  paintPixel(index: number) {
-
-    this.pixels[index].color = this.selectedColor;
+  ngOnInit(){
+    let lines = [];
+    for (let y = 0; y < 100; y++) {
+      let row : IPixel[] = [];
+      for(let x = 0; x < 100; x++ ) {
+        row.push({
+            Color: 'gray',
+            X: x,
+            Y: y
+        })
+      }
+      lines.push(row);
+    }
+    this.pixels = lines;
+    this.loadData();
   }
-   selectColor(color: string) {
-    this.selectedColor = color;
-  }
-  
-  this.api.GetAll().subscribe(
+
+  protected pixels: IPixel[][] = []
+
+  loadData(){
+    let received: IPixel[] = [
+      {X:1,Y:1,Color:'#111',LastChange:new Date()},
+      {X:2,Y:1,Color:'#634444',LastChange:new Date()},
+      {X:3,Y:1,Color:'#aa9c9c',LastChange:new Date()},
+      {X:1,Y:2,Color:'#111',LastChange:new Date()},
+      {X:2,Y:2,Color:'#b6ef9c',LastChange:new Date()},
+      {X:3,Y:2,Color:'#4c28a2',LastChange:new Date()},
+      {X:1,Y:3,Color:'#5aac79',LastChange:new Date()},
+      {X:2,Y:3,Color:'#e88f8f',LastChange:new Date()},
+      {X:3,Y:3,Color:'#862986',LastChange:new Date()},
+    ]
+
+    this.api.GetAll().subscribe(
       res => {
-        console.log(res);
-        for (let y = 0; y < 100; y++) {
-          for(let x = 0; x < 100; x++ ) {
-            let exists = res.find(p => p.x == x && p.y == y);
-            console.log(exists);
-            
-            if(exists)
-              this.pixels[x][y] = exists;
-          }
-        }
+        this.pixels = this.pixels.map((row, x) => {
+          return row.map((pixel, y) => {
+            const exists = res.find(p => p.X == x && p.Y == y);
+            return exists ? exists : pixel;
+          })
+        })
+        // Estudar!!!
+        this.cdr.detectChanges();
       }
     )
+  }
 
+  updateData(pixel: IPixel){
+    this.pixels[pixel.Y][pixel.X] = pixel
+  }
+
+  logout = () => {
+    sessionStorage.clear();
+    location.reload();
+  }
 }
 export default MainPage
-
