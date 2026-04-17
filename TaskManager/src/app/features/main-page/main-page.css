@@ -1,0 +1,104 @@
+/* .conteiner{
+  justify-self: center;
+    align-self: center;
+    display: flex;
+    inset: 0;
+
+}
+
+main {
+  width: 100%;
+  height: calc(100vh - 5rem);
+  background-color: rgb(255, 208, 245);
+  overflow: auto;
+} */
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #fdf2f8; /* rosa bem claro */
+  color: #333;
+}
+
+.header_card{
+   display: block;
+  justify-items: center;
+  justify-content: center;
+
+}
+/* Container principal */
+.conteiner {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Título e subtítulo */
+h2 {
+  font-size: 2rem;
+  color: rgb(233, 128, 193); /* rosa forte */
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* Indicadores de progresso */
+.progresso {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.progresso span {
+  background: #f8bbd0;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+
+/* Abas de navegação */
+.abas {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+}
+
+.abas button {
+  flex: 1;
+  padding: 0.7rem;
+  background: #f8bbd0;
+  border: none;
+  border-radius: 6px;
+  margin: 0 0.3rem;
+  cursor: pointer;
+}
+
+.abas button:hover {
+  background: #f48fb1;
+}
+
+/* Lista de tarefas */
+ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+li {
+  background: #fce4ec;
+  padding: 0.7rem;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+}

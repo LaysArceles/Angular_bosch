@@ -1,0 +1,48 @@
+<app-header></app-header>
+<main>
+    <div class="aff">
+        <div class="card_container">
+
+            <div class="card_header">
+                @if (isSubscribe) {
+                <h1>Subscribe</h1>
+                }@else {
+                <h1>Login</h1>
+                }
+                <img src="https://cdn-icons-png.flaticon.com/512/9972/9972749.png" value=" a">
+            </div>
+            <div class="card_main">
+                <div class="login-card">
+
+                    <!--  serve para HTML action="get" como usamos submit não precisa agora -->
+                    <form [formGroup]="loginForm" (ngSubmit)="login()">
+                        <label for="">Username</label>
+                        <br>
+                        <input type="text" formControlName="username">
+                        <br>
+                        <label for="">Password</label>
+                        <br>
+                        <input type="password" formControlName="password">
+                    </form>
+                </div>
+            </div>
+            <div class="card_footer">
+                <button type="submit">
+                    @if (isSubscribe) {
+                    Subscribe
+                    }@else {
+                    Login
+                    }
+
+                </button>
+                <button type="button" (click)="this.isSubscribe = !this.isSubscribe">
+                    @if (isSubscribe) {
+                    login
+                    }@else {
+                    Subscribe
+                    }
+                </button>
+            </div>
+        </div>
+    </div>
+</main>

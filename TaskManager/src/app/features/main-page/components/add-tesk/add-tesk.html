@@ -1,0 +1,9 @@
+<input #teskput type="text" placeholder="Enter a task" class="focus-visible:ring-primary">
+<button (click)="addTesk(teskput.value);teskput.value=''" class="bg-primary text-primary-foreground">
+    add
+</button>
+<ul>
+  @for (t of tesks(); track t) {
+    <li>{{ t }}</li>
+  }
+</ul>
