@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+  
+
+}
+
+.card_container {
+    border-radius: 10px;
+    justify-self: center;
+    align-self: center;
+    display: flex;
+    inset: 0;
+    box-shadow: 0 0 10px;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 32rem;
+    height: 32rem;
+
+}
+
+.card_main {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    width: 27rem;
+    height: 20rem;
+
+    input {
+         padding-left: 10px; /*input um espaço quando alguém digita */
+        border-radius: 18px;
+        width: 27rem;
+        height: 2.5rem;
+        border: 2px solid rgb(20, 167, 142);
+        box-shadow: 0 0 5px rgb(20, 167, 142);
+    }
+}
+
+.card_footer {
+    display: flex;
+    font-size: 2rem;
+    width: 10rem;
+    height: 5rem;
+
+}
+h1{
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+button {
+    outline: none;
+    font-size: 15px;
+    height: 2.5rem;
+    width: 10rem;
+    border: 2px solid rgb(20, 167, 142);
+    border-radius: 15px;
+    background-color:rgb(122, 189, 178);
+}
+
+button:focus {
+    outline: none;
+    border: 2px solid rgb(20, 167, 142);
+    box-shadow: 0 0 5px rgb(5, 22, 19);
+}
+
+input:focus {
+    outline: none;
+    border: 2px solid rgb(20, 167, 142);
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+}
+
+span {
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+main {
+    height: 100vh;
+    background-color: rgb(122, 189, 178);
+}
+
+.card_header {
+    background-color: rgb(20, 167, 142);
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+img {
+    cursor: pointer;
+    height: 3rem;
+    width: 3rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+
+}

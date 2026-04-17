@@ -1,6 +1,15 @@
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root',
 })
-export class Api {}
+export class Api {
+  protected readonly URl: string = "http://10.234.195.227:5294/api"
+  constructor( protected client:HttpClient){}
+  
+  protected headers: HttpHeaders = new HttpHeaders({
+    "Authorization": sessionStorage.getItem('token')!
+  })
+
+}

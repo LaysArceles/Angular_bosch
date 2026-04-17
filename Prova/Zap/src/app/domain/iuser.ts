@@ -1,6 +1,14 @@
-import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root',
-})
-export class Iuser {}
+export interface Ilogin {
+    email:string
+    password:string
+}
+
+
+export interface Isubscribe {
+    username: string
+    email: string
+    phone: string
+    birthday: string
+    password: string
+}

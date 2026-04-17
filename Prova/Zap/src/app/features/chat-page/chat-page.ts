@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
-import { ButtonC } from './button-c/button-c';
-import { InputC } from './input-c/input-c';
+import { ButtonC } from '../../shared/componentes/button-c/button-c';
+import { InputC } from '../../shared/componentes/input-c/input-c';
 import { HeaderC } from '../../shared/componentes/header-c/header-c';
 
 @Component({
