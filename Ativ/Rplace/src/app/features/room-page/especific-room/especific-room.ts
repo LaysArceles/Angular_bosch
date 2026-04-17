@@ -47,6 +47,8 @@ export class EspecificRoomPage {
     //Conectando com websocket
     this.api.connect(this.id)
 
+
+
     this.pixelSubscription = this.api.pixelsObservable.subscribe(res => {
       console.log("subscription updating: ",res);
         
